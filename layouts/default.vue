@@ -11,7 +11,14 @@ export default {
       link: [
         {
           rel:         'preload',
-          href:        '/fonts/officina-serif-bold.woff2',
+          href:        '/fonts/sf-pro-text-heavy.woff2',
+          as:          'font',
+          type:        'font/woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel:         'preload',
+          href:        '/fonts/sf-pro-text-semibold.woff2',
           as:          'font',
           type:        'font/woff2',
           crossorigin: 'anonymous',
@@ -23,21 +30,35 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@font-face {
+  font-display: swap;
+  font-family: 'SF Pro Text';
+  src: url('/fonts/sf-pro-text-heavy.eot');
+  src: url('/fonts/sf-pro-text-heavy.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/sf-pro-text-heavy.woff2') format('woff2'),
+       url('/fonts/sf-pro-text-heavy.woff') format('woff'),
+       url('/fonts/sf-pro-text-heavy.ttf') format('truetype'),
+       url('/fonts/sf-pro-text-heavy.svg#sf_pro_textheavy') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
 
 @font-face {
   font-display: swap;
-  font-family: 'ITC Officina Serif';
-  src: url('/fonts/officina-serif-bold.woff2') format('woff2'),
-       url('/fonts/officina-serif-bold.woff') format('woff'),
-       url('/fonts/officina-serif-bold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'SF Pro Text';
+  src: url('/fonts/sf-pro-text-semibold.eot');
+  src: url('/fonts/sf-pro-text-semibold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/sf-pro-text-semibold.woff2') format('woff2'),
+       url('/fonts/sf-pro-text-semibold.woff') format('woff'),
+       url('/fonts/sf-pro-text-semibold.ttf') format('truetype'),
+       url('/fonts/sf-pro-text-semibold.svg#sf_pro_textsemibold') format('svg');
+  font-weight: 700;
   font-style: normal;
 }
 
 html {
   font-family:
-    'Source Sans Pro',
+    'SF Pro Text',
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -45,7 +66,9 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

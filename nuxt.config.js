@@ -8,9 +8,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'URLShortener',
+    title: 'Дилер онлайн (устаревшая версия)',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ru'
     },
     meta: [
       { charset: 'utf-8' },
@@ -18,7 +18,53 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+          rel:   'manifest',
+          href:  '/site.webmanifest',
+        },
+        {
+          rel:   'mask-icon',
+          href:  '/safari-pinned-tab.svg',
+          color: '#2e5bff',
+        },
+        {
+          rel:   'apple-touch-icon',
+          sizes: '60x60',
+          href: '/apple-touch-icon.png',
+        },
+        {
+          rel:   'apple-touch-icon',
+          sizes: '76x76',
+          href: '/apple-touch-icon.png',
+        },
+        {
+          rel:   'apple-touch-icon',
+          sizes: '120x120',
+          href: '/apple-touch-icon.png',
+        },
+        {
+          rel:   'apple-touch-icon',
+          sizes: '152x152',
+          href: '/apple-touch-icon.png',
+        },
+        {
+          rel:   'apple-touch-icon',
+          sizes: '180x180',
+          href: '/apple-touch-icon.png',
+        },
+        {
+          rel:   'icon',
+          type:  'image/png',
+          sizes: '32x32',
+          href:  '/favicon-32x32.png',
+        },
+        {
+          rel:   'icon',
+          type:  'image/png',
+          sizes: '16x16',
+          href:  '/favicon-16x16.png',
+        },
     ]
   },
 
@@ -40,17 +86,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-svg-loader',
   ],
-
-  svgLoader: {
-    svgoConfig: {
-      plugins: [{
-        cleanupIDs: false,
-        mergePaths: false,
-      }],
-    },
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
